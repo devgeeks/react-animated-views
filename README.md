@@ -2,6 +2,7 @@
 
 > A higher order component to make mobile animated page views easier with react-router
 
+![example gif](react-animated-views.gif)
 
 It has a very small API overall. It comes down to setting up your routes, wrapping your components in the higher-order component, and using the `push()` and `pop()` methods passed in to `this.props` instead of the usual react-router versions.
 
