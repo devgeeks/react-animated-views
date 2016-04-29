@@ -5,6 +5,22 @@
 
 It has a very small API overall. It comes down to setting up your routes, wrapping your components in the higher-order component, and using the `push()` and `pop()` methods passed in to `this.props` instead of the usual react-router versions.
 
+Built in animations available (custom animations coming soon):
+
+- slideLeft
+- slideUp
+- popFade
+
+### `this.props.push(pathname, animation)`:
+
+e.g.: `push('/two', 'slideLeft');`
+
+### `this.props.pop(<optional animation>)`:
+
+e.g.: `pop()` or `pop('popFade');`
+
+Sometimes when switching animations, the `pop()` will also need the animation passed in.
+
 #### Basic example
 
 See full example in the examples folder.
