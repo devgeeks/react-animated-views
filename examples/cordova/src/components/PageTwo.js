@@ -8,6 +8,7 @@ const PageTwo = React.createClass({
   displayName: 'PageTwo',
 
   propTypes: {
+    pop: React.PropTypes.func,
     push: React.PropTypes.func,
     style: React.PropTypes.object,
   },
