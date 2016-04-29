@@ -9,7 +9,7 @@ It has a very small API overall. It comes down to setting up your routes, wrappi
 
 See full example in the examples folder.
 
-```
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { hashHistory, Redirect, Router, Route } from 'react-router';
