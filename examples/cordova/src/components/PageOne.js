@@ -12,8 +12,9 @@ const PageOne = React.createClass({
     style: React.PropTypes.object,
   },
 
-  goToPageTwo() {
+  goToPageTwo(e) {
     const { push } = this.props;
+    e.preventDefault();
     push('/two', 'slideLeft');
   },
 
@@ -23,7 +24,7 @@ const PageOne = React.createClass({
     return (
       <div className="pageone" style={ style }>
         <p>Page One</p>
-        <a
+        <a href="#"
           className="button-next-page"
           onClick={ this.goToPageTwo }
         >

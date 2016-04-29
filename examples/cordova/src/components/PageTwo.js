@@ -12,13 +12,15 @@ const PageTwo = React.createClass({
     style: React.PropTypes.object,
   },
 
-  goToPageThree() {
+  goToPageThree(e) {
     const { push } = this.props;
+    e.preventDefault();
     push('/three', 'slideUp');
   },
 
-  goBack() {
+  goBack(e) {
     const { pop } = this.props;
+    e.preventDefault();
     pop('slideLeft');
   },
 
@@ -28,13 +30,13 @@ const PageTwo = React.createClass({
     return (
       <div className="pagetwo" style={ style }>
         <p>Page Two</p>
-        <a
+        <a href="#"
           className="button-next-page"
           onClick={ this.goToPageThree }
         >
           Slide Up to page three &raquo;
         </a>
-        <a
+        <a href="#"
           className="button-back"
           onClick={ this.goBack }
         >

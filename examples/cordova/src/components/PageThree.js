@@ -12,8 +12,9 @@ const PageThree = React.createClass({
     style: React.PropTypes.object,
   },
 
-  goBack() {
+  goBack(e) {
     const { pop } = this.props;
+    e.preventDefault();
     pop('slideUp');
   },
 
@@ -23,7 +24,7 @@ const PageThree = React.createClass({
     return (
       <div className="pagethree" style={ style }>
         <p>Page Three</p>
-        <a
+        <a href="#"
           className="button-back"
           onClick={ this.goBack }
         >
