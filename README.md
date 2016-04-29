@@ -11,11 +11,11 @@ Built in animations available (custom animations coming soon):
 - slideUp
 - popFade
 
-### `this.props.push(pathname, animation)`:
+#### `this.props.push(pathname, animation)`:
 
 e.g.: `push('/two', 'slideLeft');`
 
-### `this.props.pop(<optional animation>)`:
+#### `this.props.pop(<optional animation>)`:
 
 e.g.: `pop()` or `pop('popFade');`
 
