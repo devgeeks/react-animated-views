@@ -4,6 +4,10 @@
 
 ![example gif](react-animated-views.gif)
 
+`npm install react-animated-views --save`
+
+(for now, until I publish it... has to be `npm install https://github.com/devgeeks/react-animated-views --save`)
+
 It has a very small API overall. It comes down to setting up your routes, wrapping your components in the higher-order component, and using the `push()` and `pop()` methods passed in to `this.props` instead of the usual react-router versions.
 
 Built in animations available (custom animations coming soon):
