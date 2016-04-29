@@ -21,6 +21,12 @@ e.g.: `pop()` or `pop('popFade');`
 
 Sometimes when switching animations, the `pop()` will also need the animation passed in.
 
+#### `this.props.style`:
+
+e.g.: `<div style={ style }>`
+
+Styles passed in to do the actual animations
+
 #### Basic example
 
 See full example in the examples folder.
