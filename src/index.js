@@ -1,8 +1,14 @@
 import React from 'react';
 import { popFade, slideLeft, slideUp } from './animations';
 
+function getInnerDisplayName(InnerPage) {
+  return InnerPage.displayName || InnerPage.name || 'Component';
+}
+
 export default function (InnerPage) {
   return React.createClass({
+
+    displayName: `ReactAnimatedView(${getInnerDisplayName(InnerPage)})`,
 
     propTypes: {
       direction: React.PropTypes.string,
