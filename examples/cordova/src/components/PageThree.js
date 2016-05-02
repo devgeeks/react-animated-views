@@ -24,12 +24,14 @@ const PageThree = React.createClass({
     return (
       <div className="pagethree" style={ style }>
         <p>Page Three</p>
-        <a href="#"
-          className="button-back"
-          onClick={ this.goBack }
-        >
-          &laquo; Go back to to page two
-        </a>
+        <div className="button-container">
+          <a href="#"
+            className="button-back"
+            onClick={ this.goBack }
+          >
+            &laquo; Go back to to page two
+          </a>
+        </div>
       </div>
     );
   },

@@ -24,12 +24,14 @@ const PageOne = React.createClass({
     return (
       <div className="pageone" style={ style }>
         <p>Page One</p>
-        <a href="#"
-          className="button-next-page"
-          onClick={ this.goToPageTwo }
-        >
-          Slide Left to page two &raquo;
-        </a>
+        <div className="button-container">
+          <a href="#"
+            className="button-next-page"
+            onClick={ this.goToPageTwo }
+          >
+            Slide Left to page two &raquo;
+          </a>
+        </div>
       </div>
     );
   },

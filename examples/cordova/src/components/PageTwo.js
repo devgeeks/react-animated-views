@@ -31,18 +31,20 @@ const PageTwo = React.createClass({
     return (
       <div className="pagetwo" style={ style }>
         <p>Page Two</p>
-        <a href="#"
-          className="button-next-page"
-          onClick={ this.goToPageThree }
-        >
-          Slide Up to page three &raquo;
-        </a>
-        <a href="#"
-          className="button-back"
-          onClick={ this.goBack }
-        >
-          &laquo; Go back to to page one
-        </a>
+        <div className="button-container">
+          <a href="#"
+            className="button-next-page"
+            onClick={ this.goToPageThree }
+          >
+            Slide Up to page three &raquo;
+          </a>
+          <a href="#"
+            className="button-back"
+            onClick={ this.goBack }
+          >
+            &laquo; Go back to to page one
+          </a>
+        </div>
       </div>
     );
   },

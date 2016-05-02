@@ -16,7 +16,7 @@ export default React.createClass({
     };                                   
 
     return (
-      <TransitionGroup>
+      <TransitionGroup className="transitiongroup">
         { React.cloneElement(this.props.children || <div />, props) }
       </TransitionGroup>
     );
