@@ -58,7 +58,7 @@ export default function (InnerPage) {
     push(url, animation) {
       const { router } = this.context;
       // replace current route with current route and current animation
-      // this means coming back will show the cirrect animation
+      // this means coming back will show the correct animation
       router.replace({
         pathname: this.props.location.pathname,
         query: { ...{ animation } },
