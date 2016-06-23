@@ -1,6 +1,9 @@
+// polyfill raf
+import raf from 'raf';
+
 function slideLeftIn(action, component, done) {
   if (action === 'push') {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'translate3d(100%, 0, 0)',
@@ -8,7 +11,7 @@ function slideLeftIn(action, component, done) {
           zIndex: 2,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'translate3d(0, 0, 0)',
@@ -24,7 +27,7 @@ function slideLeftIn(action, component, done) {
       });
     });
   } else {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'translate3d(-20%, 0, 0)',
@@ -33,7 +36,7 @@ function slideLeftIn(action, component, done) {
           zIndex: 1,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'translate3d(0, 0, 0)',
@@ -54,7 +57,7 @@ function slideLeftIn(action, component, done) {
 
 function slideLeftOut(action, component, done) {
   if (action === 'push') {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'translate3d(0, 0, 0)',
@@ -63,7 +66,7 @@ function slideLeftOut(action, component, done) {
           zIndex: 1,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'translate3d(-20%, 0, 0)',
@@ -80,7 +83,7 @@ function slideLeftOut(action, component, done) {
       });
     });
   } else {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'translate3d(0, 0, 0)',
@@ -88,7 +91,7 @@ function slideLeftOut(action, component, done) {
           zIndex: 2,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'translate3d(100%, 0, 0)',

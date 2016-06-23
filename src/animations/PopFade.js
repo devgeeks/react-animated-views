@@ -1,6 +1,9 @@
+// polyfill requestAnimationFrame
+import raf from 'raf';
+
 function popFadeIn(action, component, done) {
   if (action === 'push') {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'scale3d(1, 0.95, 0.95)',
@@ -9,7 +12,7 @@ function popFadeIn(action, component, done) {
           zIndex: 2,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'scale3d(1, 1, 1)',
@@ -26,7 +29,7 @@ function popFadeIn(action, component, done) {
       });
     });
   } else {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'scale3d(1, 0.95, 0.95)',
@@ -35,7 +38,7 @@ function popFadeIn(action, component, done) {
           zIndex: 1,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'scale3d(1, 1, 1)',
@@ -56,7 +59,7 @@ function popFadeIn(action, component, done) {
 
 function popFadeOut(action, component, done) {
   if (action === 'push') {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'scale3d(1, 1, 1)',
@@ -65,7 +68,7 @@ function popFadeOut(action, component, done) {
           zIndex: 1,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'scale3d(1, 0.95, 0.95)',
@@ -82,7 +85,7 @@ function popFadeOut(action, component, done) {
       });
     });
   } else {
-    requestAnimationFrame(() => {
+    raf(() => {
       component.setState({
         style: {
           transform: 'scale3d(1, 1, 1)',
@@ -91,7 +94,7 @@ function popFadeOut(action, component, done) {
           zIndex: 2,
         },
       });
-      requestAnimationFrame(() => {
+      raf(() => {
         component.setState({
           style: {
             transform: 'scale3d(1, 0.95, 0.95)',
