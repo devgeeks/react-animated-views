@@ -32,7 +32,7 @@ function slideUpIn(action, component, done) {
         style: {
           transform: 'translate3d(0, 0, 0)',
           WebkitTransform: 'translate3d(0, 0, 0)',
-          opacity: 0.7,
+          opacity: 0.9,
           zIndex: 1,
         },
       });
@@ -75,7 +75,7 @@ function slideUpOut(action, component, done) {
             transitionProperty: 'transform, opacity',
             WebkitTransition: 'all .4s cubic-bezier(.2, .7, .1, 1)',
             WebkitTransitionProperty: '-webkit-transform, opacity',
-            opacity: 0.7,
+            opacity: 0.9,
             zIndex: 1,
           },
         });
